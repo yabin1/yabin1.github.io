@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Yabin1.github.io by yabin1</title>
+    <title>Honey Badger</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -17,7 +17,7 @@
   <body>
     <div class="wrapper">
       <header class="without-description">
-        <h1>Yabin1.github.io</h1>
+        <h1>Honey Badger</h1>
         <p></p>
         <p class="view"><a href="https://github.com/yabin1">View the Project on GitHub <small>yabin1</small></a></p>
         <ul>
@@ -25,19 +25,55 @@
         </ul>
       </header>
       <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Hi to GitHub Pages.</h3>
+        
+		<h3>
+		<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages">
+		<span class="octicon octicon-link"></span></a>Hi to GitHub Pages</h3>
+		
+		<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects.</p>
+	
+		<h3>
+		<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages">
+		<span class="octicon octicon-link"></span></a>Android + Maven</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+		<p>First you should to get ready your Android environment. You can set this following the next link: <a href="http://developer.android.com/sdk/index.html">http://developer.android.com/sdk/index.html</a>.</br>
+		Honey Badger framework recommend to use a manual Android installation to avoid miss some important steps like know where is you android sdk. 
+		</p>
 
-<pre><code>$ cd your_repo_root/repo_name
+		<p>After this, you should install Maven and the android conector for maven into your eclipse</p>
+
+<pre><code>
+<p>
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId>de.akquinet.android.archetypes&lt;/groupId&gt;
+  &lt;artifactId&gt;android-quickstart&lt;/artifactId&gt;
+  &lt;version&gt;1.0.10&lt;/version&gt;
+  &lt;build&gt;
+    &lt;sourceDirectory&gt;src&lt;/sourceDirectory&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+        &lt;version&gt;3.1&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;source&gt;1.6&lt;/source&gt;
+          &lt;target&gt;1.6&lt;/target&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+&lt;/project&gt;
+</p>
+</code></pre>
+
+<!--<pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
 $ git checkout gh-pages
 
 
 $ git commit -a -m "2 commit"
 $ git push origin master
-</code></pre>
+</code></pre>-->
 
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 
