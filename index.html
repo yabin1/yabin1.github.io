@@ -40,26 +40,49 @@
 		Honey Badger framework recommend to use a manual Android installation to avoid miss some important steps like know where is you android sdk. 
 		</p>
 
-		<p>After this, you should install Maven and the android conector for maven into your eclipse</p>
+		<p>After this, you should install Maven and the Android Conector for maven into your eclipse.</br>
+		Select Help -> Eclipse Marketplace, and search for maven...</p>
+		
+		<img src="./images/mavenMarket.jpg">
+		
+		<p></br>Now install the android conector for maven. Select Help -> Eclipse Marketplace, and search android m2e.</p>
+		
+		<img src="./images/androidM2EMarket.jpg">
+		
+		<p></br>We almost done! Now you just need to create a simple android project y after that convert to a maven project: right click over the project and select Configure -> Convert to Maven Project.</p>
 
+		<p>Into the pom.xml copy and paste the next description.<p>
+		
 <pre><code>
 <p>
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-  &lt;groupId>de.akquinet.android.archetypes&lt;/groupId&gt;
+  &lt;groupId&gt;de.akquinet.android.archetypes&lt;/groupId&gt;
   &lt;artifactId&gt;android-quickstart&lt;/artifactId&gt;
+  <mark>&lt;packaging&gt;apk&lt;/packaging&gt;</mark>
   &lt;version&gt;1.0.10&lt;/version&gt;
   &lt;build&gt;
     &lt;sourceDirectory&gt;src&lt;/sourceDirectory&gt;
     &lt;plugins&gt;
-      &lt;plugin&gt;
-        &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
-        &lt;version&gt;3.1&lt;/version&gt;
-        &lt;configuration&gt;
-          &lt;source&gt;1.6&lt;/source&gt;
-          &lt;target&gt;1.6&lt;/target&gt;
-        &lt;/configuration&gt;
-      &lt;/plugin&gt;
+    	<mark>&lt;plugin&gt;</mark>
+    		<mark>&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</mark>
+        	<mark>&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</mark>
+        	<mark>&lt;configuration&gt;</mark>
+        		<mark>&lt;source&gt;1.6&lt;/source&gt;</mark>
+           		<mark>&lt;target&gt;1.6&lt;/target&gt;</mark>
+        	<mark>&lt;/configuration&gt;</mark>
+     	<mark>&lt;/plugin&gt;</mark>
+     	<mark>&lt;plugin&gt;</mark>
+     		<mark>&lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;</mark>
+       		<mark>&lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;</mark>
+        	<mark>&lt;configuration&gt;</mark>
+        	    <mark>&lt;sdk&gt;</mark>
+        	    	<mark>&lt;path&gt;${env.ANDROID_HOME}&lt;/path&gt;</mark>
+        	        <mark>&lt;platform&gt;1.6&lt;/platform&gt;</mark>
+        	    <mark>&lt;/sdk&gt;</mark>
+        	<mark>&lt;/configuration&gt;</mark>
+        	<mark>&lt;extensions&gt;true&lt;/extensions&gt;</mark>
+      	<mark>&lt;/plugin&gt;</mark>
     &lt;/plugins&gt;
   &lt;/build&gt;
 &lt;/project&gt;
@@ -75,27 +98,10 @@ $ git commit -a -m "2 commit"
 $ git push origin master
 </code></pre>-->
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+	<p>This is the basic information to configure your environment, now you can run and see your Hello World application.</p>
+	
+	<img src="./images/helloWorld.jpg">
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
       </section>
     </div>
     <footer>

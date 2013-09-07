@@ -220,6 +220,11 @@ h3, h4, h5, h6 {
   color: #494949;
 }
 
+mark {
+background-color: #CCFF66;
+--color: black;
+}
+
 blockquote {
   margin: 0 -20px 20px;
   padding: 15px 20px 1px 40px;
