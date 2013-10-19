@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Honey Badger</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="without-description">
+        <h1>Honey Badger</h1>
+        <p></p>
+        <p class="view"><a href="https://github.com/yabin1">View the Project on GitHub <small>yabin1</small></a></p>
+        <ul>
+          <li class="single"><a href="">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        
+		<h3>
+		<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages">
+		<span class="octicon octicon-link"></span></a>Hi to GitHub Pages</h3>
+		
+		<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects.</p>
+	
+		<h3>
+		<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages">
+		<span class="octicon octicon-link"></span></a>Android + Maven</h3>
+
+		<p>First you should to get ready your Android environment. You can set this following the next link: <a href="http://developer.android.com/sdk/index.html">http://developer.android.com/sdk/index.html</a>.</br>
+		Honey Badger framework recommend to use a manual Android installation to avoid miss some important steps like know where is you android sdk. 
+		</p>
+
+		<p>After this, you should install Maven and the Android Conector for maven into your eclipse.</br>
+		Select Help -> Eclipse Marketplace, and search for maven...</p>
+		
+		<img src="./images/mavenMarket.jpg">
+		
+		<p></br>Now install the android conector for maven. Select Help -> Eclipse Marketplace, and search android m2e.</p>
+		
+		<img src="./images/androidM2EMarket.jpg">
+		
+		<p></br>We almost done! Now you just need to create a simple android project y after that convert to a maven project: right click over the project and select Configure -> Convert to Maven Project.</p>
+
+		<p>Into the pom.xml copy and paste the next description.<p>
+		
+<pre><code>
+<p>
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;de.akquinet.android.archetypes&lt;/groupId&gt;
+  &lt;artifactId&gt;android-quickstart&lt;/artifactId&gt;
+  <mark>&lt;packaging&gt;apk&lt;/packaging&gt;</mark>
+  &lt;version&gt;1.0.10&lt;/version&gt;
+  &lt;build&gt;
+    &lt;sourceDirectory&gt;src&lt;/sourceDirectory&gt;
+    &lt;plugins&gt;
+    	<mark>&lt;plugin&gt;</mark>
+    		<mark>&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</mark>
+        	<mark>&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</mark>
+        	<mark>&lt;configuration&gt;</mark>
+        		<mark>&lt;source&gt;1.6&lt;/source&gt;</mark>
+           		<mark>&lt;target&gt;1.6&lt;/target&gt;</mark>
+        	<mark>&lt;/configuration&gt;</mark>
+     	<mark>&lt;/plugin&gt;</mark>
+     	<mark>&lt;plugin&gt;</mark>
+     		<mark>&lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;</mark>
+       		<mark>&lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;</mark>
+        	<mark>&lt;configuration&gt;</mark>
+        	    <mark>&lt;sdk&gt;</mark>
+        	    	<mark>&lt;path&gt;${env.ANDROID_HOME}&lt;/path&gt;</mark>
+        	        <mark>&lt;platform&gt;1.6&lt;/platform&gt;</mark>
+        	    <mark>&lt;/sdk&gt;</mark>
+        	<mark>&lt;/configuration&gt;</mark>
+        	<mark>&lt;extensions&gt;true&lt;/extensions&gt;</mark>
+      	<mark>&lt;/plugin&gt;</mark>
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+&lt;/project&gt;
+</p>
+</code></pre>
+
+<!--<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+
+
+$ git commit -a -m "2 commit"
+$ git push origin master
+</code></pre>-->
+
+	<p>This is the basic information to configure your environment, now you can run and see your Hello World application.</p>
+	
+	<img src="./images/helloWorld.jpg">
+
+      </section>
+    </div>
+    <footer>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>

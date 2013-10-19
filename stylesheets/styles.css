@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 html {
-  background: #eeeeee;
+  background: #fefefe;
   --background: #6c7989 -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6c7989), color-stop(100%, #434b55)) fixed;
   --background: #6c7989 -webkit-linear-gradient(#6c7989, #434b55) fixed;
   --background: #6c7989 -moz-linear-gradient(#6c7989, #434b55) fixed;
@@ -10,13 +10,72 @@ html {
 }
 
 body {
-  padding: 50px 0;
+  --padding: 50px 0;
+  padding: 0 0;
   margin: 0;
   font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #555;
   font-weight: 300;
   --background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAUdEVYdENyZWF0aW9uIFRpbWUAMy82LzEygrTcTAAAAFRJREFUSIljfPDggZRf5RIGGNjUHsNATz6jXmSL1Kb2GLiAX+USBnrymRgGGDCORgFmoNAXjEbBaBSMRsFoFIxGwWgUjEbBaBSMRsFoFIxGwWgUAABYNujumib3wAAAAABJRU5ErkJggg==') fixed;
 }
+
+.button-link {
+	margin:0px;
+    padding: 5px 10px;
+    background: #4479BA;
+    color: #FFF;
+}
+
+nav ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+ul {
+	background: #efefef; 
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	padding: 0 20px;
+	border-radius: 10px;  
+	list-style-type:none;
+	--list-style: none;
+	position: relative;
+	--display: inline-table;
+	display:block;
+}
+	nav ul:after {
+		content: ""; clear: both; display: block;
+	}
+	
+nav ul ul {
+	display: none;
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+nav ul li {
+	float: left;
+}
+	nav ul li:hover {
+		background: #4b545f;
+		background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+		background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+		background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+	}
+		nav ul li:hover a {
+			color: #fff;
+		}
+	
+	nav ul li a {
+		display: block; padding: 25px 40px;
+		color: #757575; text-decoration: none;
+	}
 
 .wrapper {
   width: 640px;

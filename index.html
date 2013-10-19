@@ -1,113 +1,283 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Honey Badger</title>
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Honey Badger</title>
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="without-description">
-        <h1>Honey Badger</h1>
-        <p></p>
-        <p class="view"><a href="https://github.com/yabin1">View the Project on GitHub <small>yabin1</small></a></p>
-        <ul>
-          <li class="single"><a href="">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        
-		<h3>
-		<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages">
-		<span class="octicon octicon-link"></span></a>Hi to GitHub Pages</h3>
-		
-		<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects.</p>
-	
-		<h3>
-		<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages">
-		<span class="octicon octicon-link"></span></a>Android + Maven</h3>
+  <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/foundation.css" />
 
-		<p>First you should to get ready your Android environment. You can set this following the next link: <a href="http://developer.android.com/sdk/index.html">http://developer.android.com/sdk/index.html</a>.</br>
-		Honey Badger framework recommend to use a manual Android installation to avoid miss some important steps like know where is you android sdk. 
-		</p>
+  <!-- If you are using the gem version, you need this only -->
+  <link rel="stylesheet" href="css/app.css" />
 
-		<p>After this, you should install Maven and the Android Conector for maven into your eclipse.</br>
-		Select Help -> Eclipse Marketplace, and search for maven...</p>
-		
-		<img src="./images/mavenMarket.jpg">
-		
-		<p></br>Now install the android conector for maven. Select Help -> Eclipse Marketplace, and search android m2e.</p>
-		
-		<img src="./images/androidM2EMarket.jpg">
-		
-		<p></br>We almost done! Now you just need to create a simple android project y after that convert to a maven project: right click over the project and select Configure -> Convert to Maven Project.</p>
+  <script src="js/vendor/custom.modernizr.js"></script>
 
-		<p>Into the pom.xml copy and paste the next description.<p>
-		
-<pre><code>
-<p>
-&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
-  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-  &lt;groupId&gt;de.akquinet.android.archetypes&lt;/groupId&gt;
-  &lt;artifactId&gt;android-quickstart&lt;/artifactId&gt;
-  <mark>&lt;packaging&gt;apk&lt;/packaging&gt;</mark>
-  &lt;version&gt;1.0.10&lt;/version&gt;
-  &lt;build&gt;
-    &lt;sourceDirectory&gt;src&lt;/sourceDirectory&gt;
-    &lt;plugins&gt;
-    	<mark>&lt;plugin&gt;</mark>
-    		<mark>&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</mark>
-        	<mark>&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</mark>
-        	<mark>&lt;configuration&gt;</mark>
-        		<mark>&lt;source&gt;1.6&lt;/source&gt;</mark>
-           		<mark>&lt;target&gt;1.6&lt;/target&gt;</mark>
-        	<mark>&lt;/configuration&gt;</mark>
-     	<mark>&lt;/plugin&gt;</mark>
-     	<mark>&lt;plugin&gt;</mark>
-     		<mark>&lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;</mark>
-       		<mark>&lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;</mark>
-        	<mark>&lt;configuration&gt;</mark>
-        	    <mark>&lt;sdk&gt;</mark>
-        	    	<mark>&lt;path&gt;${env.ANDROID_HOME}&lt;/path&gt;</mark>
-        	        <mark>&lt;platform&gt;1.6&lt;/platform&gt;</mark>
-        	    <mark>&lt;/sdk&gt;</mark>
-        	<mark>&lt;/configuration&gt;</mark>
-        	<mark>&lt;extensions&gt;true&lt;/extensions&gt;</mark>
-      	<mark>&lt;/plugin&gt;</mark>
-    &lt;/plugins&gt;
-  &lt;/build&gt;
-&lt;/project&gt;
-</p>
-</code></pre>
+</head>
+<body>
 
-<!--<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+  <!-- body content here -->
 
-
-$ git commit -a -m "2 commit"
-$ git push origin master
-</code></pre>-->
-
-	<p>This is the basic information to configure your environment, now you can run and see your Hello World application.</p>
-	
-	<img src="./images/helloWorld.jpg">
-
-      </section>
+  <!-- Navigation -->
+ 
+  <nav class="top-bar">
+    <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+        <h1>
+          <a href="#">
+            Honey Badger
+          </a>
+        </h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+    </ul>
+ 
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Home</a>
+          <ul class="dropdown">
+            <li><label>Section Name</label></li>
+            <li class="has-dropdown">
+              <a href="#" class="">Has Dropdown, Level 1</a>
+              <ul class="dropdown">
+                <li><a href="#">Dropdown Options</a></li>
+                <li><a href="#">Dropdown Options</a></li>
+                <li><a href="#">Level 2</a></li>
+                <li><a href="#">Subdropdown Option</a></li>
+                <li><a href="#">Subdropdown Option</a></li>
+                <li><a href="#">Subdropdown Option</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li class="divider"></li>
+            <li><label>Section Name</label></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li class="divider"></li>
+            <li><a href="#">See all &rarr;</a></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+        <li><a href="#">Docs</a></li>
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Contact</a>
+          <ul class="dropdown">
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li class="divider"></li>
+            <li><a href="#">See all &rarr;</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+ 
+  <!-- End Top Bar -->
+ 
+  <div class="row">
+    <div class="large-12 columns">
+ 
+    <!-- Content Slider -->
+ 
+      <div class="row">
+        <div class="large-12 hide-for-small">
+ 
+			<img src="./img/badgerRelease.jpg">
+          <!--<div id="featured" data-orbit>
+              <img src="http://placehold.it/1200x500&text=Slide Image 1" alt="slide image">
+              <img src="http://placehold.it/1200x500&text=Slide Image 2" alt="slide image">
+              <img src="http://placehold.it/1200x500&text=Slide Image 3" alt="slide image">
+            </div>-->
+ 
+      </div>
     </div>
-    <footer>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+ 
+    <!-- End Content Slider -->
+ 
+    <!-- Mobile Header -->
+ 
+      <div class="row">
+        <div class="large-12 columns show-for-small">
+ 
+          <img src="http://placehold.it/1200x700&text=Mobile Header">
+ 
+        </div>
+      </div><br>
+ 
+    <!-- End Mobile Header -->
+ 
+ 
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <!-- Shows -->
+            <div class="large-4 small-12 columns">
+ 
+				<h4>Download</h4><hr>
+				<div class="panel">
+					<h5><a href="./oneMavenAndroid.html">1. Maven + Android + HB</a></h5>
+ 
+					<h6 class="subheader">
+					You can download throw Maven and reach an extendable way to development. Bring the power of a business development to your apps. 
+					</h6>
+ 
+        
+				</div>
+ 
+				<div class="panel">
+					<h5><a href="./oneAndroidHB.html">1. Android + HB</a></h5>
+				
+					<h6 class="subheader">
+					You can just configure Android and Download Honey Badger for a quick development.<br><br>
+					</h6>
+				</div>
+			
+				<div class="panel">
+					<h5><a href="./oneIOSHB.html">1. iOS + HB</a></h5>
+				
+					<h6 class="subheader">
+					You can also configureHoney Badger for iOS... Download and start working.<br><br>
+					</h6>
+				</div>
+             
+ 
+            <!--  <a href="#" class="right">Go To Blog »</a>-->
+ 
+            </div>
+            <!-- End Shows -->
+ 
+ 
+            <!-- Image -->
+ 
+			<div class="large-4 small-12 columns">
+ 
+				<h4>Configure</h4><hr>
+				<div class="panel">
+					<h5><a href="./twoHowItWorks.html">2. How it works...</a></h5>
+ 
+					<h6 class="subheader">
+					now is time to go forward and start using HB. <br><br><br> 
+					</h6>
+ 
+        
+				</div>              
+ 
+            </div>
+            <!--<div class="large-4 small-6 columns">
+              <img src="http://placehold.it/300x465&amp;text=Image">
+            </div>-->
+ 
+            <!-- End Image -->
+ 
+ 
+            <!-- Feed -->
+ 
+            <div class="large-4 small-12 columns">
+ 
+              <h4>Communication</h4><hr>
+              <div class="panel">
+                <h5><a href="./threeWebService.html">3. Web Services</a></h5>
+ 
+                <h6 class="subheader">
+                  This tool provide a complete way to communication throw Rest Web Services. <br><br>
+                </h6>
+              </div>
+			  
+			  <div class="panel">
+                <h5><a href="./threeWebService.html">4. Backbound</a></h5>
+ 
+                <h6 class="subheader">
+                  Show your apps as faster and pretty you want.<br><br>
+                </h6>
+              </div>
+ 
+              <a href="#" class="right">Go To Blog »</a>
+ 
+            </div>
+ 
+            <!-- End Feed -->
+ 
+          </div>
+        </div>
+      </div>
+ 
+    <!-- End Content -->
+ 
+ 
+    <!-- Footer -->
+ 
+      <footer class="row">
+        <div class="large-12 columns"><hr>
+            <div class="row">
+ 
+              <div class="large-6 columns">
+                <!--  <p>&copy; Copyright no one at all. Go to town.</p>-->
+              </div>
+ 
+              <div class="large-6 small-12 columns">
+                <!--  <ul class="inline-list right">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                  </ul>  -->
+              </div>
+ 
+            </div>
+        </div>
+      </footer>
+ 
+    <!-- End Footer -->
+ 
+    </div>
+  </div>
+ 
+  <script>
+  document.write('<script src=js/vendor/' +
+  ('__proto__' in {} ? 'zepto' : 'jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+<!-- End Footer -->
+  
+  
+  <!-- end body content -->
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.alerts.js"></script>
+  <script src="js/foundation/foundation.clearing.js"></script>
+  <script src="js/foundation/foundation.cookie.js"></script>
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  <script src="js/foundation/foundation.forms.js"></script>
+  <script src="js/foundation/foundation.joyride.js"></script>
+  <script src="js/foundation/foundation.magellan.js"></script>
+  <script src="js/foundation/foundation.orbit.js"></script>
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  <script src="js/foundation/foundation.reveal.js"></script>
+  <script src="js/foundation/foundation.section.js"></script>
+  <script src="js/foundation/foundation.tooltips.js"></script>
+  <script src="js/foundation/foundation.topbar.js"></script>
+  <script src="js/foundation/foundation.interchange.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
 </html>
