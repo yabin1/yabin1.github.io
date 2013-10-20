@@ -123,6 +123,76 @@
 		</div>
  
 		<center><img src="./img/helloWorld.jpg"></center><br><br>
+		
+		<h3>Add Honey Badger for Maven to your repository</h3>
+     
+        <div class="row">
+          <div class="large-12 columns">
+            <p>Add to your pom.xml the next lines and is ready!</p>
+          </div>
+		<pre><code>
+			
+			<hr />
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;de.akquinet.android.archetypes&lt;/groupId&gt;
+  &lt;artifactId&gt;android-quickstart&lt;/artifactId&gt;
+  &lt;packaging&gt;apk&lt;/packaging&gt;
+  &lt;version&gt;1.0.10&lt;/version&gt;
+  <mark>&lt;dependencies&gt;</mark>
+	<mark>&lt;dependency&gt;</mark>
+		<mark>&lt;groupId&gt;BadgerForMaven&lt;/groupId&gt;</mark>
+		<mark>&lt;artifactId&gt;BadgerForMaven&lt;/artifactId&gt;</mark>
+		<mark>&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</mark>
+		<mark>&lt;type&gt;maven-plugin&lt;/type&gt;</mark>
+	<mark>&lt;/dependency&gt;</mark>
+  <mark>&lt;/dependencies&gt;</mark>
+  <mark>&lt;repositories&gt;</mark>
+	<mark>&lt;repository&gt;</mark>
+		<mark>&lt;id&gt;repository&lt;/id&gt;</mark>
+		<mark>&lt;name&gt;repository&lt;/name&gt;</mark>
+		<mark>&lt;url&gt;https://github.com/yabin1/BadgerForMaven-1.0&lt;/url&gt;</mark>
+	<mark>&lt;/repository&gt;</mark>
+	<mark>&lt;repository&gt;</mark>
+		<mark>&lt;id&gt;snapshotRepository&lt;/id&gt;</mark>
+		<mark>&lt;name&gt;snapshotRepository&lt;/name&gt;</mark>
+		<mark>&lt;url&gt;https://github.com/yabin1/BadgerForMaven-1.0&lt;/url&gt;</mark>
+	<mark>&lt;/repository&gt;</mark>
+  <mark>&lt;/repositories&gt;</mark>
+  &lt;build&gt;
+    &lt;sourceDirectory&gt;src&lt;/sourceDirectory&gt;
+    &lt;plugins&gt;
+    	&lt;plugin&gt;
+    		&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        	&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+        	&lt;configuration&gt;
+        		&lt;source&gt;1.6&lt;/source&gt;
+           		&lt;target&gt;1.6&lt;/target&gt;
+        	&lt;/configuration&gt;
+     	&lt;/plugin&gt;
+     	&lt;plugin&gt;
+     		&lt;groupId&gt;com.jayway.maven.plugins.android.generation2&lt;/groupId&gt;
+       		&lt;artifactId&gt;android-maven-plugin&lt;/artifactId&gt;
+        	&lt;configuration&gt;
+        	    &lt;sdk&gt;
+        	    	&lt;path&gt;${env.ANDROID_HOME}&lt;/path&gt;
+        	        &lt;platform&gt;1.6&lt;/platform&gt;
+        	    &lt;/sdk&gt;
+        	&lt;/configuration&gt;
+        	&lt;extensions&gt;true&lt;/extensions&gt;
+      	&lt;/plugin&gt;
+		<mark>&lt;plugin&gt;</mark>
+			<mark>&lt;groupId&gt;BadgerForMaven&lt;/groupId&gt;</mark>
+			<mark>&lt;artifactId&gt;BadgerForMaven&lt;/artifactId&gt;</mark>
+			<mark>&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</mark>
+		<mark>&lt;/plugin&gt;</mark>
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+&lt;/project&gt;
+		<hr />
+		</code></pre>
+		</div>
+		
       </article>
  
     </div>
@@ -137,7 +207,7 @@
       <h5>Categories</h5>
       <ul class="side-nav">
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./twoHowItWorks,html">Configure</a></li>
+        <li><a href="./twoHowItWorks.html">Configure</a></li>
         <li><a href="./threeWebService.html">Web Service</a></li>
         <li><a href="./fourBackbound.html">Backbound</a></li>
       </ul>
